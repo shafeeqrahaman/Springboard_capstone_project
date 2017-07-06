@@ -1,0 +1,70 @@
+---
+title: "Data Wrangling Exercise 1"
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r message=FALSE}
+library(dplyr)
+library(tidyr)
+library(readr)
+library(plyr)
+library(magrittr)
+```
+
+####Requirement over here is to clean the dataset provided in order to make it easier to **visualize and analyze.**
+
+# Step 0: Load the data in RStudio
+####Loading the CSV file that needs to cleaned
+```{r Load}
+refine_original <- read.csv("refine_original.csv", header = TRUE)
+```
+
+# Step 1: Clean up brand names
+####Cleaning the company column for misspellings 
+```{r}
+refine_original$company %<>% tolower()
+refine_original %<>% mutate(company = replace(company, company %in% c('phillips','phllips','philips','phillps','fillips','phlips'), 'philips'))
+refine_original %<>% mutate(company = replace(company, company %in% c('akzo','akz0','ak zo'), 'akzo'))
+refine_original %<>% mutate(company = replace(company, company %in% c('unilver','unilever'), 'unilever'))
+```
+
+# Step 2: Separate Product Code and Number 
+####Divide the **'Product.Code...Number'** variable into two new variables
+```{r}
+refine_original %<>% separate('Product.code...number', c("product_code","product_number"),sep = "-", remove=TRUE)
+```
+
+# Step 3: Adding new variable to the dataset
+####Add Product Categories variable to the dataset that abbreviate the codes in product code variable.
+```{r}
+refine_original %<>% mutate(product_category = case_when(refine_original$product_code == 'p' ~ 'Smartphone', refine_original$product_code == 'v' ~ 'TV', refine_original$product_code =='x' ~ 'Laptop', refine_original$product_code == 'q' ~ 'Tablet'))
+```
+
+# Step 4: Add full address for geocoding
+####Combine all three variables, address, city, country to form a new variable Full Address
+```{r}
+refine_original %<>% unite(full_address, c(address, city, country),sep = ',',remove=TRUE)
+```
+
+# Step 5: Create dummy variables for company and product category.
+####Create dummy variables for company and product category as they are categorical variables.
+```{r}
+refine_original %<>% mutate(company_philips = (if_else(grepl(pattern='philips', x=refine_original$company), 1, 0)))
+refine_original %<>% mutate(company_akzo = (if_else(grepl(pattern='akzo', x=refine_original$company), 1, 0)))
+refine_original %<>% mutate(company_vanhouten = (if_else(grepl(pattern='van houten', x=refine_original$company), 1, 0)))
+refine_original %<>% mutate(company_unilever = (if_else(grepl(pattern='unilever', x=refine_original$company), 1, 0)))
+refine_original %<>% mutate(product_smartphone = (if_else(grepl(pattern='p', x=refine_original$product_code), 1, 0)))
+refine_original %<>% mutate(product_laptop = (if_else(grepl(pattern='x', x=refine_original$product_code), 1, 0)))
+refine_original %<>% mutate(product_TV = (if_else(grepl(pattern='v', x=refine_original$product_code), 1, 0)))
+refine_original %<>% mutate(product_Tablet = (if_else(grepl(pattern='q', x=refine_original$product_code), 1, 0)))
+```
+
+# Step 6: Save as a new dataframe and submit on Github.
+####Creating the cleaned file and submitting it into Github
+```{r}
+write.csv(refine_original, "refine_clean.csv")
+```
+

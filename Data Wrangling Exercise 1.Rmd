@@ -3,6 +3,7 @@ title: "Data Wrangling Exercise 1"
 author: Shafeeq Ur Rahaman
 date: July 06 2017
 output: html_document
+
 ---
 
 ```{r setup, include=TRUE}
@@ -20,8 +21,11 @@ library(magrittr)
 
 # Step 0: Load the data in RStudio
 ####Loading the CSV file that needs to cleaned
-```{r Load}
+```{r Load, echo=TRUE}
 refine_original <- read.csv("refine_original.csv", header = TRUE)
+```
+```{r, echo=FALSE}
+refine_original
 ```
 
 # Step 1: Clean up brand names
@@ -32,11 +36,17 @@ refine_original %<>% mutate(company = replace(company, company %in% c('phillips'
 refine_original %<>% mutate(company = replace(company, company %in% c('akzo','akz0','ak zo'), 'akzo'))
 refine_original %<>% mutate(company = replace(company, company %in% c('unilver','unilever'), 'unilever'))
 ```
+```{r, echo=FALSE}
+refine_original
+```
 
 # Step 2: Separate Product Code and Number 
 ####Divide the **'Product.Code...Number'** variable into two new variables
 ```{r}
 refine_original %<>% separate('Product.code...number', c("product_code","product_number"),sep = "-", remove=TRUE)
+```
+```{r, echo=FALSE}
+refine_original
 ```
 
 # Step 3: Adding new variable to the dataset
@@ -44,11 +54,17 @@ refine_original %<>% separate('Product.code...number', c("product_code","product
 ```{r}
 refine_original %<>% mutate(product_category = case_when(refine_original$product_code == 'p' ~ 'Smartphone', refine_original$product_code == 'v' ~ 'TV', refine_original$product_code =='x' ~ 'Laptop', refine_original$product_code == 'q' ~ 'Tablet'))
 ```
+```{r, echo=FALSE}
+refine_original
+```
 
 # Step 4: Add full address for geocoding
 ####Combine all three variables, address, city, country to form a new variable Full Address
 ```{r}
 refine_original %<>% unite(full_address, c(address, city, country),sep = ',',remove=TRUE)
+```
+```{r, echo=FALSE}
+refine_original
 ```
 
 # Step 5: Create dummy variables for company and product category.
@@ -62,6 +78,9 @@ refine_original %<>% mutate(product_smartphone = (if_else(grepl(pattern='p', x=r
 refine_original %<>% mutate(product_laptop = (if_else(grepl(pattern='x', x=refine_original$product_code), 1, 0)))
 refine_original %<>% mutate(product_TV = (if_else(grepl(pattern='v', x=refine_original$product_code), 1, 0)))
 refine_original %<>% mutate(product_Tablet = (if_else(grepl(pattern='q', x=refine_original$product_code), 1, 0)))
+```
+```{r, echo=FALSE}
+refine_original
 ```
 
 # Step 6: Save as a new dataframe and submit on Github.

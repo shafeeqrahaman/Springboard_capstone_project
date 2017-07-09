@@ -2,10 +2,7 @@
 title: "Data Wrangling Exercise 1"
 author: "Shafeeq Ur Rahaman"
 date: "July 06 2017"
-output:
-  html_document: default
-  pdf_document: default
-  word_document: default
+output: html_document
 ---
 
 ```{r setup, include=TRUE}

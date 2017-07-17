@@ -3,7 +3,8 @@ While the data set is small and simple, it still illustrates many of the challen
 
 The data is in an csv file called refine.csv. Right away, you'll notice that the data set has a few issues:
 
-1.There are four brands: Philips, Akzo, Van Houten and Unilever. However, there are many different spellings and capitalizations of those names!
+1. There are four brands: Philips, Akzo, Van Houten and Unilever. However, there are many different spellings and capitalizations of those names!
+
 2. The product code and number are combined in one column, separated by a hyphen. 
 
 Exercise:

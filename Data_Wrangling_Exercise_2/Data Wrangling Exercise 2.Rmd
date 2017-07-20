@@ -1,0 +1,62 @@
+---
+title: "Data Wrangling Exercise 2"
+author: "Shafeeq Ur Rahaman"
+date: "7/17/2017"
+output: html_document
+---
+```{r message=FALSE}
+library(tidyverse)
+library(magrittr)
+```
+####Requirement over here is to clean the dataset provided in order to make it easier to **visualize and analyze.**
+
+# Step 0: Load the data in RStudio
+####Loading the CSV file that needs to cleaned
+```{r echo=TRUE,message=FALSE}
+titanic_original <- read_csv("titanic_original.csv", col_names = TRUE)
+titanic_original
+```
+# Step 1: Port of embarkation
+####Replacing the missing values such as blank and empty string 
+```{r}
+titanic_original %<>% mutate(embarked = if_else(is.na(embarked), 'S', embarked))
+titanic_original %>% select(embarked) %>% unique()
+```
+# Step 2: Age
+####Replacing the missing values such as blank and empty string by calculating the mean of the age
+```{r}
+#titanic_original %<>% mutate(age = if_else(is.na(age), mean(age, na.rm = TRUE), age))
+titanic_groupby_average <- titanic_original %>% 
+                            group_by(pclass, sex) %>% 
+                            summarise(meanage=mean(age, na.rm=TRUE))
+
+titanic_original <- titanic_original %>% 
+                     left_join(titanic_groupby_average, by=c("pclass","sex")) %>%
+                     mutate(age=if_else(is.na(age), meanage, age)) %>% 
+                     select(-meanage)
+
+any(is.na(titanic_original$age))
+  
+```
+# Step 3: Lifeboat
+####Replacing the missing values such as blank and empty string by NA. But as read_csv function was used to load the dataset all missing values were already replaced by 'NA'
+```{r}
+any(is.na(titanic_original$cabin))
+
+any(titanic_original$cabin=="", na.rm = TRUE)
+```
+# Step 4: Cabin
+####Create a tracking column has_cabin_number so as can be used as a indicator of survival
+```{r}
+titanic_original$has_cabin_number <- if_else(is.na(titanic_original$cabin), 0, 1)
+titanic_original
+```
+#Step 5: Save as a new dataframe and submit on Github.
+####Creating the cleaned file and submitting it into Github
+```{r}
+write_csv(titanic_original,"titanic_clean.csv")
+```
+
+
+
+

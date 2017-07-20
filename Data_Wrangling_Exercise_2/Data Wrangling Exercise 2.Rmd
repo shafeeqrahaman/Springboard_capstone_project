@@ -2,7 +2,9 @@
 title: "Data Wrangling Exercise 2"
 author: "Shafeeq Ur Rahaman"
 date: "7/17/2017"
-output: html_document
+output:
+  html_document: default
+  word_document: default
 ---
 ```{r message=FALSE}
 library(tidyverse)
@@ -14,7 +16,7 @@ library(magrittr)
 ####Loading the CSV file that needs to cleaned
 ```{r echo=TRUE,message=FALSE}
 titanic_original <- read_csv("titanic_original.csv", col_names = TRUE)
-titanic_original
+head(titanic_original)
 ```
 # Step 1: Port of embarkation
 ####Replacing the missing values such as blank and empty string 
@@ -51,7 +53,8 @@ any(titanic_original$cabin=="", na.rm = TRUE)
 titanic_original$has_cabin_number <- if_else(is.na(titanic_original$cabin), 0, 1)
 titanic_original
 ```
-#Step 5: Save as a new dataframe and submit on Github.
+
+# Step 5: Save as a new dataframe and submit on Github.
 ####Creating the cleaned file and submitting it into Github
 ```{r}
 write_csv(titanic_original,"titanic_clean.csv")

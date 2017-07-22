@@ -1,0 +1,59 @@
+---
+title: "Capstone"
+author: "Shafeeq Ur Rahaman"
+date: "7/22/2017"
+output: html_document
+---
+
+###Springboard Capstone Project
+####**Can Small Independent Pharmacies compete with the big chains?**
+
+Independent pharmacies are often competing with mass merchants (like Target or Walmart), grocery stores, and chain drugstores (such as CVS or Rite Aid) who can offer a broader selection of over-the-counter (OTC) products. These may include milk, bread, toys, candy etc. where the independent pharmacies have a harder time accessing these products and having space for them in the pharmacy.
+
+###What is the problem you want to solve?
+I would like to recommend certain actions/steps that independent pharmacies can take to increase their revenue both from the perspective of front end store sales and from the pharmacy as a whole itself so that the profit of the stores increases.
+
+###Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?
+
+Independent pharmacies would be my client and based on my analysis the pharmacies would be able to decide on things as;
+1. Which products to always have in stock?
+2. Which products or product categories are not generating sufficient revenue?
+3. Identify how geographic and economic variable factors into the products a pharmacy should carry?
+
+###What data are you going to use for this? How will you acquire this data?
+
+I am going to use the extracted, anonymized data from the AmerisourceBergen Point-Of-Sale Data warehouse and retrieve the data from AmerisourceBergen Challenge in the AIS Student Chapter Competitions. The dataset consists of following individual files
+
+a.	**PHRMCY MASTER:** Pharmacy Master with set of Pharmacy IDs (surrogate keys), de-identified Pharmacy names, State Cd & Zip 3 Cd
+b.	**PROD MASTER:** Product Master
+c.	**MAJOR PROD CAT:** Major Category Codes
+d.	**PROD CAT:** Product Category Codes
+e.	**PROD SUB CAT:** Product Sub-Category Codes
+f.	**PROD SEG:** Product Segment Codes
+g.	**POS TRANS:** Point-of-Sales transactions with Sales Dates of for six months, from 2016-01-01 through 2016-06-30 
+
+###In brief, outline your approach to solving this problem (knowing that this might change later).
+
+Taking the **CRISP-DM** framework approach, I would like to outline my approach using this framework.  
+
+**1. Business Understanding** -
+I would start by understanding what is it that the business needs to accomplish and how it could accomplish. Independent pharmacies typically generate the majority of the business’ revenue from prescriptions filled by the pharmacy.  As the owners/operators are busy filling prescriptions, this can result in the “front-end” of the Pharmacy where over-the-counter medicines, health and beauty products, and snacks and drinks are sold to receive less attention. I would try to understand the issues that the independent pharmacies are having with respect to the sales over-the-counter (OTC) products in particular and in general how can they increase their profits from sales. Currently the main issue is that the independent pharmacies are having a harder time accessing the OTC products as they are unable to decide which products to offer from the wide variety of selection present in market and allocate space for them at the pharmacy. Then would address the other issue is increasing the profits of the pharmacy by posting questions such as which products to stock, which not to, which should be stocked according to geographic and economic conditions.  
+
+**2. Data Understanding** -
+The dataset has files/tables which when viewed can be understand as a relational database as there would be parent and child relationship between the tables. I would examine the dataset for its format, number of records, and fields in each table. Next would load the tables into R and using querying, data visulization would look for the distribution of the attributes, quality of data, errors, missing values, and relationships between various attributes.  
+
+**3. Data Preparation** - 
+I would select the required data that I am going to use for the analysis and decide what I am going to include and exclude. Next I would clean the data by correcting the errors, substituting the missing values with suitable defaults. After cleansing all the data and constructing the required data, I would integrate the data by merging the various tables which would result in one table that would have one record for a particular record by combining fields from source tables.  
+
+**4. Modelling** -
+I would select certain modelling techniques which would be suitable for current dataset and interpret the model to match my data mining success criteria by judging the success of the application of modelling.  
+
+**5. Evaluation** -
+I would evaluate the results of a model to assess the degree to which it meets my business objectives and seek to determine if there is some business reason why this model is deficient. Later I would perform a thorough review of the data mining engagement in order to determine if there is any important factor or task that has somehow been overlooked.  
+
+**6. Depolyment** -
+This stage I believe would be where we would be deciding how we deploy the results that we have obtained from the evaluation. Basically in the real world it would be providing these results to the independent pharmacies so that they make take further decisions based on the results put forward. A final report would be generally produced that would provide summary of the project and its experiences and a comprehensive presentation of the data mining results.  
+
+###What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.
+
+The deliverables for this project will be submitted  on github and published on RPubs. The deliverables published on Github would include code that I used to analyse the data, key findings, visual representations, slides, and final conclusions.

@@ -5,7 +5,7 @@ date: "7/22/2017"
 output: html_document
 ---
 
-###Springboard Capstone Project
+#Springboard Capstone Project  
 ####**Can Small Independent Pharmacies compete with the big chains?**
 
 Independent pharmacies are often competing with mass merchants (like Target or Walmart), grocery stores, and chain drugstores (such as CVS or Rite Aid) who can offer a broader selection of over-the-counter (OTC) products. These may include milk, bread, toys, candy etc. where the independent pharmacies have a harder time accessing these products and having space for them in the pharmacy.

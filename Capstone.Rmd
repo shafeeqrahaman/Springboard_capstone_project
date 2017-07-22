@@ -54,6 +54,6 @@ I would evaluate the results of a model to assess the degree to which it meets m
 **6. Depolyment** -
 This stage I believe would be where we would be deciding how we deploy the results that we have obtained from the evaluation. Basically in the real world it would be providing these results to the independent pharmacies so that they make take further decisions based on the results put forward. A final report would be generally produced that would provide summary of the project and its experiences and a comprehensive presentation of the data mining results.  
 
-### **What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.**
+###   **What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.**
 
 The deliverables for this project will be submitted  on github and published on RPubs. The deliverables published on Github would include code that I used to analyse the data, key findings, visual representations, slides, and final conclusions.

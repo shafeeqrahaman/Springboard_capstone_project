@@ -16,9 +16,9 @@ I would like to recommend certain actions/steps that independent pharmacies can 
 ### **2. Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?**
 
 Independent pharmacies would be my client and based on my analysis the pharmacies would be able to decide on things as;
-i. Which products to always have in stock?
-ii. Which products or product categories are not generating sufficient revenue?
-iii. Identify how geographic and economic variable factors into the products a pharmacy should carry?
++ Which products to always have in stock?
++ Which products or product categories are not generating sufficient revenue?
++ Identify how geographic and economic variable factors into the products a pharmacy should carry?
 
 ### **3. What data are you going to use for this? How will you acquire this data?**
 

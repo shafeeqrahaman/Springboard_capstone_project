@@ -92,22 +92,22 @@ SLS_QTY | Sales Quantity
 
 Taking the **CRISP-DM** framework approach, I would like to outline my approach using this framework.  
 
-**i). Business Understanding** -
+**i) Business Understanding** -
 I would start by understanding what is it that the business needs to accomplish and how it could accomplish. Independent pharmacies typically generate the majority of the business’ revenue from prescriptions filled by the pharmacy.  As the owners/operators are busy filling prescriptions, this can result in the “front-end” of the Pharmacy where over-the-counter medicines, health and beauty products, and snacks and drinks are sold to receive less attention. I would try to understand the issues that the independent pharmacies are having with respect to the sales over-the-counter (OTC) products in particular and in general how can they increase their profits from sales. Currently the main issue is that the independent pharmacies are having a harder time accessing the OTC products as they are unable to decide which products to offer from the wide variety of selection present in market and allocate space for them at the pharmacy. Then would address the other issue is increasing the profits of the pharmacy by posting questions such as which products to stock, which not to, which should be stocked according to geographic and economic conditions.  
 
-**ii). Data Understanding** -
+**ii) Data Understanding** -
 The dataset has files/tables which when viewed can be understand as a relational database as there would be parent and child relationship between the tables. I would examine the dataset for its format, number of records, and fields in each table. Next would load the tables into R and using querying, data visulization would look for the distribution of the attributes, quality of data, errors, missing values, and relationships between various attributes.  
 
-**iii). Data Preparation** - 
+**iii) Data Preparation** - 
 I would select the required data that I am going to use for the analysis and decide what I am going to include and exclude. Next I would clean the data by correcting the errors, substituting the missing values with suitable defaults. After cleansing all the data and constructing the required data, I would integrate the data by merging the various tables which would result in one table that would have one record for a particular record by combining fields from source tables.  
 
-**iv). Modeling/Analysis** -
+**iv) Modeling/Analysis** -
 I would be analysing the dataset and see if in future current proposal could be tweaked for the project proposal.
 
-**v). Evaluation** -
+**v) Evaluation** -
 I would evaluate the results of my analysis to assess the degree to which it meets my business objectives and seek to determine if there is some business reason why this model is deficient. Later I would perform a thorough review of the data mining engagement in order to determine if there is any important factor or task that has somehow been overlooked.  
 
-**vi). Depolyment** -
+**vi) Depolyment** -
 This stage I believe would be where we would be deciding how we deploy the results that we have obtained from the evaluation. Basically in the real world it would be providing these results to the independent pharmacies so that they make take further decisions based on the results put forward. A final report would be generally produced that would provide summary of the project and its experiences and a comprehensive presentation of the data mining results.  
 
 ###   **5. What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.**

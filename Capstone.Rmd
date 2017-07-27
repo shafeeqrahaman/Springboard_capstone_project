@@ -26,7 +26,7 @@ I am going to use the extracted, anonymized data from the AmerisourceBergen Poin
 
 a.	**PHRMCY MASTER:** Pharmacy Master with set of Pharmacy IDs (surrogate keys), de-identified Pharmacy names, State Cd & Zip 3 Cd    
     Variable  | Description                                   |  
-    --------- | --------------------------------------------- |  
+    _________ | _____________________________________________ |  
     PHRMCY_NBR| Pharmacy Identifier  
     
     

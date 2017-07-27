@@ -16,15 +16,15 @@ I would like to recommend certain actions/steps that independent pharmacies can 
 ### **2. Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?**
 
 Independent pharmacies would be my client and based on my analysis the pharmacies would be able to decide on things as;
-1. Which products to always have in stock?
-2. Which products or product categories are not generating sufficient revenue?
-3. Identify how geographic and economic variable factors into the products a pharmacy should carry?
+i. Which products to always have in stock?
+ii. Which products or product categories are not generating sufficient revenue?
+iii. Identify how geographic and economic variable factors into the products a pharmacy should carry?
 
 ### **3. What data are you going to use for this? How will you acquire this data?**
 
 I am going to use the extracted, anonymized data from the AmerisourceBergen Point-Of-Sale Data warehouse and retrieve the data from AmerisourceBergen Challenge in the AIS Student Chapter Competitions. The dataset consists of following individual files
 
-### **DATASET** ###
+### **DATASET:** ###
 
 a.	**PHRMCY MASTER:** Pharmacy Master with set of Pharmacy IDs (surrogate keys), de-identified Pharmacy names, State Cd & Zip 3 Cd
 

@@ -25,8 +25,8 @@ Independent pharmacies would be my client and based on my analysis the pharmacie
 I am going to use the extracted, anonymized data from the AmerisourceBergen Point-Of-Sale Data warehouse and retrieve the data from AmerisourceBergen Challenge in the AIS Student Chapter Competitions. The dataset consists of following individual files
 
 a.	**PHRMCY MASTER:** Pharmacy Master with set of Pharmacy IDs (surrogate keys), de-identified Pharmacy names, State Cd & Zip 3 Cd    
-    Variable | Description                                 |  
-    ---------|---------------------------------------------|  
+    Variable  | Description                                   |
+    --------- | --------------------------------------------- |  
     PHRMCY_NBR| Pharmacy Identifier  
     
     

@@ -26,10 +26,6 @@ I am going to use the extracted, anonymized data from the AmerisourceBergen Poin
 
 a.	**PHRMCY MASTER:** Pharmacy Master with set of Pharmacy IDs (surrogate keys), de-identified Pharmacy names, State Cd & Zip 3 Cd  
 
----
-Test: "test"
-Test2: "testest"
----
 b.	**PROD MASTER:** Product Master  
 
 c.	**MAJOR PROD CAT:** Major Category Codes  

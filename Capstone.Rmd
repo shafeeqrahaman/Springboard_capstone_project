@@ -38,20 +38,53 @@ b.	**PROD MASTER:** Product Master
 Variable| Description                                   |  
 --------| ----------------------------------------------| 
 PROD_NBR | Product Identifier  
-PROD_DESC | Description of the product  
+PROD_DESC | Description Of The Product  
 MAJOR_CAT_CD | Major Category Code  
 CAT_CD | Category Code  
 SUB_CAT_CD | Sub Category Code  
 SEGMENT_CD | Segment Code  
 
+c.	**MAJOR PROD CAT:** Major Category Code  
 
+Variable| Description                                   |  
+--------| ----------------------------------------------| 
+MAJOR_CAT_CD | Major Category Code Identifier  
+MAJOR_CAT_DESC | Description Of Major Category Code  
 
-
-c.	**MAJOR PROD CAT:** Major Category Codes  
 d.	**PROD CAT:** Product Category Codes  
+
+Variable| Description                                   |  
+--------| ----------------------------------------------| 
+CAT_CD | Category Code Identifier  
+CAT_DESC | Description Of Category Code  
+MAJOR_CAT_CD | Major Category Code  
+
 e.	**PROD SUB CAT:** Product Sub-Category Codes  
+
+Variable| Description                                   |  
+--------| ----------------------------------------------| 
+SUB_CAT_CD | Sub Category Code Identifier  
+SUB_CAT_DESC | Description Of Sub Category Description  
+CAT_CD | Category Code  
+
 f.	**PROD SEG:** Product Segment Codes  
+
+Variable| Description                                   |  
+--------| ----------------------------------------------| 
+SEG_CD | Segment Identifier  
+SEG_DESC | Description of Segment  
+SUB_CAT_CD | Sub Category Code  
+
 g.	**POS TRANS:** Point-of-Sales transactions with Sales Dates of for six months, from 2016-01-01 through 2016-06-30   
+
+Variable| Description                                   |  
+--------| ----------------------------------------------| 
+BSKT_ID | Basket Identifier  
+PHRMCY_NBR | Pharmacy Identifier  
+PROD_NBR | Product Identifier  
+SLS_DTE_NBR | Sale Date  
+EXT_SLS_AMT | Total Sale Amount  
+SLS_QTY | Sales Quantity  
 
 ### **In brief, outline your approach to solving this problem (knowing that this might change later).**
 

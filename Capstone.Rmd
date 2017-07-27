@@ -10,19 +10,21 @@ output: html_document
 
 Independent pharmacies are often competing with mass merchants (like Target or Walmart), grocery stores, and chain drugstores (such as CVS or Rite Aid) who can offer a broader selection of over-the-counter (OTC) products. These may include milk, bread, toys, candy etc. where the independent pharmacies have a harder time accessing these products and having space for them in the pharmacy.
 
-### **What is the problem you want to solve?**  
+### **1. What is the problem you want to solve?**  
 I would like to recommend certain actions/steps that independent pharmacies can take to increase their revenue both from the perspective of front end store sales and from the pharmacy as a whole itself so that the profit of the stores increases.
 
-### **Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?**
+### **2. Who is your client and why do they care about this problem? In other words, what will your client DO or DECIDE based on your analysis that they wouldn’t have otherwise?**
 
 Independent pharmacies would be my client and based on my analysis the pharmacies would be able to decide on things as;
 1. Which products to always have in stock?
 2. Which products or product categories are not generating sufficient revenue?
 3. Identify how geographic and economic variable factors into the products a pharmacy should carry?
 
-### **What data are you going to use for this? How will you acquire this data?**
+### **3. What data are you going to use for this? How will you acquire this data?**
 
 I am going to use the extracted, anonymized data from the AmerisourceBergen Point-Of-Sale Data warehouse and retrieve the data from AmerisourceBergen Challenge in the AIS Student Chapter Competitions. The dataset consists of following individual files
+
+####**DATASET**####
 
 a.	**PHRMCY MASTER:** Pharmacy Master with set of Pharmacy IDs (surrogate keys), de-identified Pharmacy names, State Cd & Zip 3 Cd
 
@@ -86,7 +88,7 @@ SLS_DTE_NBR | Sale Date
 EXT_SLS_AMT | Total Sale Amount  
 SLS_QTY | Sales Quantity  
 
-### **In brief, outline your approach to solving this problem (knowing that this might change later).**
+### **4. In brief, outline your approach to solving this problem (knowing that this might change later).**
 
 Taking the **CRISP-DM** framework approach, I would like to outline my approach using this framework.  
 
@@ -108,6 +110,6 @@ I would evaluate the results of a model to assess the degree to which it meets m
 **6. Depolyment** -
 This stage I believe would be where we would be deciding how we deploy the results that we have obtained from the evaluation. Basically in the real world it would be providing these results to the independent pharmacies so that they make take further decisions based on the results put forward. A final report would be generally produced that would provide summary of the project and its experiences and a comprehensive presentation of the data mining results.  
 
-###   **What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.**
+###   **5. What are your deliverables? Typically, this would include code, along with a paper and/or a slide deck.**
 
 The deliverables for this project will be submitted  on github and published on RPubs. The deliverables published on Github would include code that I used to analyse the data, key findings, visual representations, slides, and final conclusions.

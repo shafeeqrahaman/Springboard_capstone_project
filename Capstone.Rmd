@@ -33,8 +33,19 @@ PHRMCY_NAM | Pharmacy Name
 ST_CD | State Code  
 ZIP_3_CD | Zipe Code 
     
-    
 b.	**PROD MASTER:** Product Master  
+
+Variable| Description                                   |  
+--------| ----------------------------------------------| 
+PROD_NBR | Product Identifier  
+PROD_DESC | Description of the product  
+MAJOR_CAT_CD | Major Category Code  
+CAT_CD | Category Code  
+SUB_CAT_CD | Sub Category Code  
+SEGMENT_CD | Segment Code  
+
+
+
 
 c.	**MAJOR PROD CAT:** Major Category Codes  
 d.	**PROD CAT:** Product Category Codes  

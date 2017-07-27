@@ -28,7 +28,10 @@ a.	**PHRMCY MASTER:** Pharmacy Master with set of Pharmacy IDs (surrogate keys),
 
 Variable| Description                                   |  
 --------| ----------------------------------------------|  
-Test    | Test
+PHRMCY_NBR | Pharmacy Identifier  
+PHRMCY_NAM | Pharmacy Name  
+ST_CD | State Code  
+ZIP_3_CD | Zipe Code 
     
     
 b.	**PROD MASTER:** Product Master  

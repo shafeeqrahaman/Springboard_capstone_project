@@ -19,7 +19,7 @@ library(magrittr)
 #### Requirement over here is to clean the dataset provided in order to make it easier to **visualize and analyze.**
 
 # Step 0: Load the data in RStudio
-####Loading the CSV file that needs to cleaned
+#### Loading the CSV file that needs to cleaned
 ```{r Load, echo=TRUE}
 refine_original <- read.csv("refine_original.csv", header = TRUE)
 ```
